@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Score</label>
+    <input type="text" name="" id="in" placeholder="Enter your Score">
+    <h1 id="re"></h1>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value;
+
+    if(score >= 90 && score <= 100)
+    {
+        document.getElementById("re").innerHTML = score + "A"
+    }
+
+    else if(score >= 90 && score <= 80)
+    {
+        document.getElementById("re").innerHTML = score + "B"
+    }
+
+    else if(score >= 80 && score <= 70)
+    {
+        document.getElementById("re").innerHTML = score + "C"
+    }
+
+</script>
