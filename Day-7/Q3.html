@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+       <br> <label for="">Even or Odd Number</label>
+        <br>
+        <input type="number" name="" id="val1" placeholder="Enter Number ">
+        <h3 id="ans"></h3>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("val1").value
+
+    if (a == "") {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+        if(a % 2 == 0)
+        {
+            document.getElementById("ans").innerHTML = "Even"
+        }
+        else
+        {
+            document.getElementById("ans").innerHTML = "odd"
+        }
+    }
+</script>
