@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Rajdhani', sans-serif;
+            }
+            input{
+                margin-top: 15px;
+                width: 300px;
+                height: 40px;
+                padding-left: 20px;
+            }
+        </style>
+</head>
+<body>
+
+    <center>
+    <br>
+    <h1>Simple Interest Calculation</h1>
+        <br><br>
+        <form action="">
+            <label for="">Principal Amount</label>
+            <br>
+            <input type="text" name="" id="i1" placeholder="Principal Amount">
+            <br> <br>
+
+            <label for="">Rate of Interest</label>
+            <br>
+            <input type="text" name="" id="i2" placeholder="Rate of Interest">
+            <br> <br>
+
+            <label for="">Time Period</label>
+            <br>
+            <input type="text" name="" id="i3" placeholder="Time Period">
+            <br> <br>
+        </form>
+    </center>
+
+    <center>
+    <h1 id="full"></h1>
+</center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("i1").value 
+    let b = document.getElementById("i2").value 
+    let c = document.getElementById("i3").value  
+
+    let ans = a * b * c / 100
+
+document.getElementById("full").innerHTML = "Simple Interest Calculate :" + ans
+</script>

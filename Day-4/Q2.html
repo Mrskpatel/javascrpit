@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        input{
+            margin-top: 15px;
+            width: 300px;
+            height: 40px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+   <br> <h1>Restaurant Bill Calculation</h1> <br>
+
+    <label for="">Enter First Dise Value : </label>
+            <br>
+            <input type="text" placeholder="First Dise Value" id="i1">
+            <br><br>
+
+            <label for="">Enter Second Dise Value : </label>
+            <br>
+            <input type="text" placeholder="Second Dise Value" id="i2">
+            <br><br>
+
+            <label for="">Enter Third Dise Value : </label>
+            <br>
+            <input type="text" placeholder="Third Dise Value" id="i3">
+            <br><br>
+
+            <label for="">Enter Fourth Dise Value : </label>
+            <br>
+            <input type="text" placeholder="Fourth Dise Value" id="i4">
+            <br><br>
+
+            <label for="">Enter Fifth Dise Value : </label>
+            <br>
+            <input type="text" placeholder="Fifth Dise Value" id="i5">
+            <br><br>
+
+            <h1 id="ans"></h1>
+    </center>
+    
+</body>
+</html>
+<script>
+let a = document.getElementById("i1").value
+let b = document.getElementById("i2").value
+let c = document.getElementById("i3").value
+let d = document.getElementById("i4").value
+let e = document.getElementById("i5").value
+
+let totlebill = +a + +b + +c + +d + +e
+
+let gst = totlebill * 18/100
+
+let service = totlebill * 10/100
+
+let full = gst + service
+
+document.getElementById("ans").innerHTML = "Your Bill amount is  : " + full
+</script>

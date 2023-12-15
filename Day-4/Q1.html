@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        input{
+            margin-top: 15px;
+            width: 300px;
+            height: 40px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <form action="">
+            <h1>Swap Values </h1> <br>
+            <label for="">Enter First Value : </label>
+            <br>
+            <input type="text" placeholder="First Value" id="i1">
+            <br><br>
+
+            <label for="">Enter Second Value : </label>
+            <br>
+            <input type="text" placeholder="Second Value" id="i2">
+            <br><br>
+
+            <label for="">Enter Third Value : </label>
+            <br>
+            <input type="text" placeholder="Third Value" id="i3">
+            <br><br>
+
+            <label for="">Enter Fourth Value : </label>
+            <br>
+            <input type="text" placeholder="Fourth Value" id="i4">
+            <br><br>
+
+            <label for="">Enter Fifth Value : </label>
+            <br>
+            <input type="text" placeholder="Fifth Value" id="i5">
+            <br><br>
+        </form>
+    </center>
+
+    <center>
+    <h1>Before</h1>
+    <h3 id="box-1"></h3>
+    <h3 id="box-2"></h3>
+    <h3 id="box-3"></h3>
+    <h3 id="box-4"></h3>
+    <h3 id="box-5"></h3>
+        
+    <h1>After</h1>
+    <h3 id="box1"></h3>
+    <h3 id="box2"></h3>
+    <h3 id="box3"></h3>
+    <h3 id="box4"></h3>
+    <h3 id="box5"></h3>
+    </center>
+    
+</body>
+</html>
+<script>
+    let a = document.getElementById("i1").value 
+    let b = document.getElementById("i2").value 
+    let c = document.getElementById("i3").value 
+    let d = document.getElementById("i4").value 
+    let e = document.getElementById("i5").value 
+
+    document.getElementById("box-1").innerHTML = a
+    document.getElementById("box-2").innerHTML = b
+    document.getElementById("box-3").innerHTML = c
+    document.getElementById("box-4").innerHTML = d
+    document.getElementById("box-5").innerHTML = e
+
+    document.getElementById("box1").innerHTML = b
+    document.getElementById("box2").innerHTML = c
+    document.getElementById("box3").innerHTML = d
+    document.getElementById("box4").innerHTML = e
+    document.getElementById("box5").innerHTML = a
+</script>
