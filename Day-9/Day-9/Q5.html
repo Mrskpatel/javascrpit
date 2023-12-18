@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Grade</h1>
+        <input type="text" name="" id="in" placeholder="Enter Your Grade">
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value
+    let grade
+    switch (a) {
+        case 'a':grade = "Excellent! You got an A"
+        break;
+
+        case 'b' : grade = "Well done! You got a B"
+        break;
+
+        case 'c' : grade = "Good job! You got a C"
+        break;
+
+        case 'd' : grade = "You got a D"
+        break;
+    
+        case 'f' : grade = "Unfortunately, you failed"
+        break;
+
+        default: "invalid input"
+        break;
+    }
+    document.getElementById("ans").innerHTML = grade
+    console.log(grade)
+</script>

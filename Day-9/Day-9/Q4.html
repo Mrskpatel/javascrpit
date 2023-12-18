@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>language</title>
+    <style>
+        h1{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h3{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Language</h1>
+        <br>
+        <h3>English</h3>
+        <h3>Spanish</h3>
+        <h3>French</h3>
+
+        <br>
+        <input type="text" name="" id="in" placeholder="Enter Language">
+        <h1 id="ans"></h1>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in").value
+    let language 
+    switch (a) {
+        case 'English':language = "Hello..!"
+        break;
+
+        case 'Spanish':language = "Hola..!"
+        break;
+
+        case 'French':language = "Bonjour..!"
+        break;
+    
+        default: "invalid input"
+        break;
+    }
+    document.getElementById("ans").innerHTML = language
+    console.log(language)
+</script>

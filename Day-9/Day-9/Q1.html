@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            margin-top: 20px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1> Day of the Week</h1>
+        <input type="text" name="" id="in" placeholder="enter ">
+       <br> <h1 id="ans"></h1>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let day = document.getElementById("in").value 
+
+    let data
+
+    switch(parseInt(day)){
+
+        case 1 : data = `Today is Monday (it's the start of the workweek )`
+        break
+
+        case 2 :data = `Today is Tuesday (it's second day of the workweek )`
+        break
+
+        case 3:data = `Today is Wensday (it's third day of the workweek)`
+        break
+
+        case 4 :data = `Today is Thirsday (it's fourth day of the workweek)`
+        break
+
+        case 5:data = `Today is Friday (it's almost the weekend!)`
+        break
+
+        case 6:data = `Today Saturday (it's some other day)`
+        break
+
+        case 7:data = `Today Sunday (full enjoy!!!)`
+        break
+
+        default :data = `invalid input`
+    }
+
+    document.getElementById("ans").innerHTML = data
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            margin-top: 20px;
+            padding-left: 15px;
+        }
+
+        #in3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Calculator</h1>
+
+        <input type="text" name="" id="in3" placeholder="Enter Choise"><br>
+        <input type="text" name="" id="in1" placeholder="Enter Value"> 
+        <input type="text" name="" id="in2" placeholder="Enter Value"> <br> <br>
+
+        <h1 id="ans"></h1>
+
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    let value1=document.getElementById("in1").value
+
+    let value2=document.getElementById("in2").value
+
+    let choise=document.getElementById("in3").value
+
+    let result
+
+    switch(choise){
+        case '+' :result= `Result = ${+value1 + +value2}`
+        break
+
+        case '-':result= `Result = ${+value1 - +value2}`
+        break
+
+        case '*':result= `Result = ${+value1 * +value2}`
+        break
+
+        case '/':result= `Result = ${+value1 / +value2}`
+        break
+
+        default:
+            result=`invalid input`
+    }
+
+    document.getElementById("ans").innerHTML = result
+
+    console.log(result)
+
+</script>
