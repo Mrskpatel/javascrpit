@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2,h3{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Enter Charcter</h2>
+        <input type="text" name="" id="in" placeholder="Enter Charcter">
+        <h3 id="ans"></h3>
+    </center>
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value
+
+    if(a=="")
+    {
+        ans==""
+    }
+    else{
+        
+    switch (a) {
+        case "A": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "E": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "I": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "O": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "U": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "a": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "e": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "i": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "o": document.getElementById("ans").innerText = "Vowel"
+        break;
+
+        case "u": document.getElementById("ans").innerText = "Vowel"
+        break;
+    
+        default: document.getElementById("ans").innerHTML = "Consonant"
+        break;
+    }
+}
+
+</script>

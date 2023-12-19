@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        h3{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h3>Enter The Number</h3>
+        <input type="text" placeholder="Enter the value" id="in">
+    </center>
+    
+</body>
+</html>
+<script>
+    let number=document.getElementById("in").value;
+
+    let f = 0;
+    let s = 1;
+    let next;
+
+    for(let i = 0; i <= number; i++)
+    {
+        if( i <=1)
+        {
+            next = i;
+        }
+        else
+        {  next = f + s;
+            f = s;
+            s = next;
+        }
+        console.log(next);
+    }
+</script>

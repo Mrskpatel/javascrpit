@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        h2,h3{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2> Day of the Week </h2>
+       <input type="text" id="in" placeholder="Enter">
+       <h3 id="ans"></h3>
+
+    </center>
+    
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value;
+    let day;
+if(a=="")
+{
+    dayname==""
+}
+else
+{
+    switch(parseInt(a))
+  {  
+     case 1 : day ="Sunday "
+     break;
+
+     case 2:day ="Monday"
+     break;
+
+     case 3: day ="Tuesday  "
+     break;
+
+     case 4 : day ="Wednesday "
+     break;
+
+     case 5:day ="Thusday "
+     break;
+
+     case 6: day ="Friday "
+     break;
+
+     case 7: day ="saturday "
+     break;
+
+     default : "invalid input"
+     break;
+    
+  }
+ document.getElementById("ans").innerHTML = day;
+}
+ 
+</script>

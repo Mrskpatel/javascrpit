@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2,h3{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h2>Enter Canadian Dollar</h2>
+        <input type="text" name="" id="in" placeholder="Enter Canadian Dollar"> 
+        <h3 id="ans"></h3>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    let canadiandollar=document.getElementById("in").value 
+    let pr
+
+    if(canadiandollar=="")
+    {
+        pr=" "
+    }else{
+
+    pr=canadiandollar*61
+
+    document.getElementById("ans").innerHTML = "Indian Rupee : " +pr
+    }
+</script>

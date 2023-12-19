@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h3>Enter The Number Of Guests</h3>
+        <input type="text" name="" id="in" placeholder="Enter The Number Of Guests">
+    </center>
+    
+</body>
+</html>
+<script>
+    let a = document.getElementById("in").value
+
+    if (a == 0) {
+        
+        console.log("It seems like no one is attending the reception. Are you sure?")
+    } 
+    else if(a == 1)
+    {
+        console.log("Great! There is one guest attending the reception.")
+    }
+    else if(a == 2)
+    {
+        console.log("Perfect! You and one other person will be attending the reception.")
+    }
+    else if(a > 2
+    ){
+        console.log("guests will be attending the reception.")
+    }
+    else{
+        console.log("Invalid input. Please enter a valid number of guests")
+    }
+
+   
+</script>
