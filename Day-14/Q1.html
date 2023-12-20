@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 350px;
+            height: 40px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <input type="text" name="" id="a1" placeholder="Enter number">
+    </center>
+</body>
+</html>
+<script>
+    let num = document.getElementById("a1").value
+    let t = "True"
+    let f = "False"
+    
+    let b = function() 
+    {
+        if (num % 2 == 0) {
+            return t
+        } else {
+            return f
+        }
+    }
+    console.log(b());
+</script>
