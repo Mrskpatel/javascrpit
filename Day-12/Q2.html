@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,4 +43,50 @@
 		console.log("Addition Is : ",parseInt(d))
 	}
 	addnumber()
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 250px;
+            height: 40px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+	<br><label>Enter 1st Number : </label> <br>
+
+	<input type="text" id="i1" placeholder="Enter Number"> <br> <br> <br>
+	
+	<label>Enter 2nd Number : </label><br>
+
+	<input type="text" id="i2" placeholder="Enter Number"> <br> <br> <br>
+    
+	<label>Enter 3rd Number : </label><br>
+
+	<input type="text" id="i3" placeholder="Enter Number"> <br> <br> <br>
+</center>
+</body>
+</html>
+<script>
+    	
+	let a = document.getElementById("i1").value 
+	let b = document.getElementById("i2").value
+	let c = document.getElementById("i3").value
+	let d 
+	function addnumber() 
+	{
+		d = +a + +b + +c
+		console.log("Addition Is : ",parseInt(d))
+	}
+	addnumber()
+>>>>>>> f4deb658655a2d27c3695c21c536c5e4cec8ecc9
 </script>   
