@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let array = [ 9 , 2 , 10 , 22  , 25 , 12 , 8]
+    console.log(array);
+    console.log("Even Number");
+
+    let evennumber = array.filter((el)=>
+    {
+        return el%2==0
+    })
+
+    console.log(evennumber);
+    console.log("Largest Even Number");
+
+    let Largest =evennumber.reduce((a,b)=>{
+        return a>b ? a : b
+    })
+    console.log(Largest);
+</script>
+
+<!-- 5141 -->
