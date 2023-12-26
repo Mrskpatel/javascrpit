@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      let book = [
+        {
+            title : "Never let the fear of striking out keep you from playing the game.",
+            author : "Babe Ruth",
+            price : 60,
+            category : "Life",
+            quantityAvailable :0
+        },
+
+        {
+            title : "I'm sick of following my dreams, man. I'm just going to ask where they're going and hook up with ’em later.",
+            author : "Mitch Hedberg",
+            price : 15,
+            category : "Funny",
+            quantityAvailable :5
+        },
+
+        {
+            title : "We cannot solve problems with the kind of thinking we employed when we came up with them.",
+            author : "Albert Einstein",
+            price : 600,
+            category : "Deep motivational",
+            quantityAvailable :1
+        },
+
+        {
+            title : "If people knew how hard I worked to get my mastery, it wouldn't seem so wonderful after all.",
+            author : "Michelangelo",
+            price : 1300,
+            category : "success",
+            quantityAvailable :10
+        },
+    ] 
+
+    let arry = []
+
+    for(let i = 0 ; i <book.length ; i++)
+    {
+        if(book[i].price<60 && book[i].quantityAvailable !=0)
+        {
+            arry.push(book[i].title)
+        }
+    }
+    console.log(arry);
+</script>

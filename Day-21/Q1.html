@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let student =[
+        {
+            name : "Sarthi" + "<br>",
+            score : 90,
+        },
+        {
+            name : "Raj"  + "<br>",
+            score : 70,
+        },
+        {
+            name : "Ayan"  + "<br>",
+            score : 100,
+        },
+        {
+            name : "Pratik"  + "<br>",
+            score : 92,
+        },
+        {
+            name : "Sharthi"  + "<br>",
+            score : 35,
+        },
+    ]
+
+    let arry=[]
+
+    for(let i=0;i<student.length;i++)
+    {
+        if(student[i].score >=90)
+        {
+            arry.push(student[i].name)
+            
+        }
+    }
+    
+    document.write(arry)
+
+</script>
