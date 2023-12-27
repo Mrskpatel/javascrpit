@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    let book = [
+    {
+            title : "The purpose of our lives is to be happy.",
+            author : "Dalai Lama",
+            year : 1986
+        },
+
+        {
+            title : "If people knew how hard I worked to get my mastery, it wouldn't seem so wonderful after all.",
+            author : "Michelangelo",
+            year :2006
+        },
+
+        {
+            title : "Get busy living or get busy dying.",
+            author : "Stephen King",
+            year :1976
+        },
+
+        {
+            title : "Get busy living or get busy dying.",
+            author : "Stephen King",
+            year : 1825
+        }
+
+    ]
+
+// let a = []
+
+function arr(a=[] , year =[]){
+    
+    
+    for(let i=0;i<book.length;i++)
+    {
+        if(book[i].year<2000)
+        {
+            a.push(book[i].title + " :"+ book[i].year)
+        }
+    }
+    return a;
+
+}
+console.log(arr())
+</script>
