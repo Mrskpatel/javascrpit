@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <input type="text" placeholder="Enter First Value" id="in1"> <br> <br>
+        <input type="text" placeholder="Enter Second Value" id="in2"><br> <br>
+        <input type="text" placeholder="Enter Second Value" id="in3"><br> <br>
+        <input type="text" placeholder="Enter Second Value" id="in4"><br> <br>
+        <br><br><br>
+        <h1 id="ans"></h1>
+        <button onclick="a1()">Addition</button>
+        <button onclick="a2()">Subtraction</button>
+        <button onclick="a3()">Division</button>
+        <button onclick="a4()">Multiplication</button>
+    </center>
+    
+</body>
+</html>
+<script>
+    
+
+    function a1(){
+    let a = document.getElementById("in1").value;
+    let b = document.getElementById("in2").value;
+    let c = document.getElementById("in3").value;
+    let d = document.getElementById("in4").value;
+    let e = +a + +b + +c + +d;
+    document.getElementById("ans").innerHTML = "Addition : " + e
+    }
+
+    function a2(){
+    let a = document.getElementById("in1").value;
+    let b = document.getElementById("in2").value;
+    let c = document.getElementById("in3").value;
+    let d = document.getElementById("in4").value;
+    let e = +a - +b - +c - +d;
+    document.getElementById("ans").innerHTML = "Addition : " + e
+    }
+
+    function a3(){
+    let a = document.getElementById("in1").value;
+    let b = document.getElementById("in2").value;
+    let e = +a / +b 
+    document.getElementById("ans").innerHTML = "Addition : " + e
+    }
+
+    function a4(){
+    let a = document.getElementById("in1").value;
+    let b = document.getElementById("in2").value;
+    let c = document.getElementById("in3").value;
+    let d = document.getElementById("in4").value;
+    let e = +a * +b * +c * +d;
+    document.getElementById("ans").innerHTML = "Addition : " + e
+    }
+</script>
