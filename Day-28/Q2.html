@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Person{
+        constructor(name , age , weight){
+            this.name = name
+            this.age = age
+            this.weight = weight
+        }
+    }
+
+    class mainPerson extends Person{
+        constructor(name , age ,  weight , work ){
+            super(name , age , weight )
+            this.work = work
+        }
+    } 
+
+    const a1 = new mainPerson("Sarthi" , 18 , 40 , "Full stack")
+    const a2 = new Person("Vivek" , 20 , 78 )
+    const a3 = new mainPerson("Pratik" , 20 , 78 , "Full Stack")
+
+    console.log(a1);
+    console.log(a2);
+    console.log(a3);
+</script>

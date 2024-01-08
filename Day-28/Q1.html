@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Car{
+        constructor(brand , model , color , price){
+            this.brand = brand
+            this.model = model
+            this.color = color
+            this.price = price
+
+        }
+    }
+
+    class mainCar extends Car{
+        constructor(brand , model , color , price , battryCapcity){
+            super(brand , model , color , price)
+            this.battryCapcity = battryCapcity
+        }
+    }
+
+    const a1 = new Car("Lamborghini" , "Urus" , "Black" , 20000000)
+    const a2 = new Car("Volvo" , "XC40" , "Blue" , 1503698)
+    const a3 = new mainCar("BMW" , "BMW 2 SERIES GRAN" , "Red" ,  4350000.00 , "900 Khw")
+
+    console.log(a1);
+    console.log(a2);
+    console.log(a3);
+</script>
