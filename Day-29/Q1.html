@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Shape{
+        Scircle()
+        {
+            return "area"
+        }
+        Srectangle()
+        {
+            return "area1"
+        }
+        Ssquare()
+        {
+            return "area2"
+        }
+    }
+
+    class circle extends Shape{
+        Scircle(π , r){
+            return  "circle : " + π * (r * r) 
+        }
+    }
+
+    class Rectangle extends Shape{
+        Srectangle(w , l){
+            return  "Rectangle : " + w * l
+        }
+    }
+    
+    class Square extends Shape{
+        Ssquare(a ){
+            return  "Square : " + a * a
+        }
+    }
+
+    const cir = new circle
+    const rec = new Rectangle
+    const squ = new Square
+    
+    console.log(cir.Scircle(3.14 , 20));
+    console.log(rec.Srectangle(20 , 20));
+    console.log(squ.Ssquare(40));
+
+</script>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,62 +54,4 @@
 
 generateNumberPattern(4);
 
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<script>
-    function generateNumberPattern(n) {
-  const matrix = [];
-  for (let i = 0; i < n; i++) {
-    matrix[i] = [];
-    for (let j = 0; j < n; j++) {
-      matrix[i][j] = 0;
-    }
-  }
-
-  let counter = 1;
-  let startRow = 0;
-  let endRow = n - 1;
-  let startCol = 0;
-  let endCol = n - 1;
-
-  while (startRow <= endRow && startCol <= endCol) {
-    for (let i = startCol; i <= endCol; i++) {
-      matrix[startRow][i] = counter++;
-    }
-    startRow++;
-
-    for (let i = startRow; i <= endRow; i++) {
-      matrix[i][endCol] = counter++;
-    }
-    endCol--;
-
-    for (let i = endCol; i >= startCol; i--) {
-      matrix[endRow][i] = counter++;
-    }
-    endRow--;
-
-    for (let i = endRow; i >= startRow; i--) {
-      matrix[i][startCol] = counter++;
-    }
-    startCol++;
-  }
-
-  for (let i = 0; i < n; i++) {
-    console.log(matrix[i].join(' '));
-  }
-}
-
-generateNumberPattern(4);
-
->>>>>>> f4deb658655a2d27c3695c21c536c5e4cec8ecc9
 </script>
