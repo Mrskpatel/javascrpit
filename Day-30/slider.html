@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+      <div class="main">
+        <div class="logo"><img src="img/logo.svg" alt=""></div>
+        <nav>
+            <ul>
+                <li><input type="search" name="" id="" placeholder="Search for Products , Brands and More">
+                    <i class="fa-solid fa-magnifying-glass" id="search"></i></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn"><i class="fa-regular fa-circle-user"></i> &nbsp;&nbsp;Dropdown </button>
+                        <div class="dropdown-content">
+                          <a href="#">New Customer? <span>Sign Up</span></a> <hr>
+                          <a href="#"><i class="fa-regular fa-circle-user"></i>&nbsp; My Profile</a>
+                          <a href="#"><i class="fa-solid fa-plus"></i>&nbsp; Flipkart Plus Zone</a>
+                          <a href="#"><i class="fa-solid fa-box"></i>&nbsp; </a>
+                          <a href="#">Link 3</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                        </div>
+                        
+                    </li>
+                    <li><i class="fa-solid fa-cart-shopping"></i>&nbsp; <b>Cart</b></li>
+                    <li><i class="fa-solid fa-store"></i>&nbsp; <b>Become a Seller</b></li>
+                    <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="Products">
+        <div class="sub-Products">
+            <img src="img/29327f40e9c4d26b.png" alt="">
+            <h4>Grocery</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/22fddf3c7da4c4f4.png" alt="">
+            <h4>Mobiles</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/0d75b34f7d8fbcb3.png" alt="">
+            <h4>Fashion</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/69c6589653afdb9a.png" alt="">
+            <h4>Eletronics</h4>
+
+        </div>
+        <div class="sub-Products">
+            <img src="img/ab7e2b022a4587dd.jpg" alt="">
+            <h4>Home & Furniture</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/0139228b2f7eb413.jpg" alt="">
+            <h4>Appliances</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/71050627a56b4693.png" alt="">
+            <h4>Travel</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/dff3f7adcf3a90c6.png" alt="">
+            <h4>Beauty , Toy <br> & More...</h4>
+        </div>
+        <div class="sub-Products">
+            <img src="img/05d708653beff580.png" alt="">
+            <h4>Two Wheelers</h4>
+        </div>
+        
+    </div>
+
+
+    <div class="">
+        <img src="img/009501a3ad6d6fd2.jpg" alt="" id="img">
+        <img src="img/7fd0e4ab26429926.jpg" alt="" id="img">
+        <img src="img/ca2843e62171405e.jpg" alt="" id="img">
+        <img src="img/de6d58606eb35cd9.jpg" alt="" id="img">
+        <img src="img/f51d4324b73f58d7.jpg" alt="" id="img">
+    </div>
+</body>
+</html>
+<script>
+    let sliders = document.querySelectorAll("#img")
+    let sliderIndex = 0
+
+    function ShowSlides(index) {
+        for (let i = 0; i < sliders.length; i++) {
+            sliders[i].style.display = "none"
+        }
+        sliders[index].style.display = "block"
+    }
+
+    function StartSlides() {
+        setInterval(()=>{
+            ShowSlides(sliderIndex)
+            sliderIndex++
+
+            if (sliderIndex >= sliders.length) {
+                sliderIndex = 0
+            }
+        },2000)
+    }
+
+    StartSlides()
+    ShowSlides(sliderIndex)
+</script>
