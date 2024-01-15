@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Css -->
+    <link rel="stylesheet" href="Style3.css">
+</head>
+<body>
+    <div class="main">
+       <div class="sub">
+        <center>
+            <img src="home.gif" alt="">
+            <p>Real Estate</p>
+            <h4 id="counter">3921</h4>
+        </center>
+       </div> 
+       <div class="sub">
+        <center>
+            <img src="books.gif" alt="">
+            <p>Books & Magazines</p>
+            <h4 id="counter1">398</h4>
+        </center>
+       </div> 
+       <div class="sub">
+        <center>
+            <img src="bunk-bed.gif" alt="">
+            <p>Furniture</p>
+            <h4 id="counter2">1229</h4>
+        </center>
+       </div> 
+    
+        <div class="sub">
+            <center>
+                <img src="idea.gif" alt="">
+                <p>Electroincs</p>
+                <h4 id="counter3">32891</h4>
+            </center>
+        </div> 
+        <div class="sub">
+            <center>
+                <img src="car.gif" alt="">
+                <p>Cars & Vehicles</p>
+                <h4 id="counter4">29221 </h4>
+            </center>
+        </div> 
+        <div class="sub">
+            <center>
+                <img src="pizza.gif" alt="">
+                <p>Other</p>
+                <h4 id="counter5">219</h4>
+            </center>
+        </div> 
+    </div>
+</body>
+</html>
+<script>
+    var counter = document.getElementById("counter")
+    var counter1 = document.getElementById("counter1")
+    var counter2 = document.getElementById("counter2")
+    var counter3 = document.getElementById("counter3")
+    var counter4 = document.getElementById("counter4")
+    var counter5 = document.getElementById("counter5")
+    var count = 3921;
+    var count1 = 398;
+    var count2 = 1229;
+    var count3 = 32891;
+    var count4 = 29221;
+    var count5 = 219;
+
+    setInterval(()=>{
+        count--;
+        counter.innerHTML = count
+
+        if(count == 0)
+        {
+            count = 3922
+        }
+    },100)
+
+   setInterval(()=>{
+    count1--;
+    counter1.innerHTML = count1
+
+    if(count1 == 0)
+        {
+            count1 = 399
+        }
+   },100)
+
+   setInterval(()=>{
+    count2--;
+    counter2.innerHTML = count2
+
+    if(count2 == 0)
+        {
+            count2 = 1230
+        }
+   },100)
+
+   setInterval(()=>{
+    count3--;
+    counter3.innerHTML = count3
+
+    if(count3 == 0)
+        {
+            count2 = 32892
+        }
+   },100)
+
+   setInterval(()=>{
+    count4--;
+    counter4.innerHTML = count4
+
+    if(count4 == 0)
+        {
+            count4 = 29222
+        }
+   },100)
+
+   setInterval(()=>{
+    count5--;
+    counter5.innerHTML = count5
+
+    if(count5 == 0)
+        {
+            count5 = 220
+        }
+   },100)
+</script>
