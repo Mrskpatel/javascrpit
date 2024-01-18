@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #photo{
+            width: 250px;
+            height: 300px;
+        }
+
+        #main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        button{
+            margin-bottom: 20px;
+        }
+        div{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <select name="" id="sort-select">
+            <option value="high">Price high to low</option>
+            <option value="low">Price low to high</option>
+            <option value="az">az</option>
+            <option value="za">za</option>
+        </select>   
+        <div id="main"></div>
+    </center>
+    </body>
+</html>
+<script>
+    let data = [
+        {
+            id : 1,
+            image : "https://www.myraymond.com/media/product/PMTX05515-G8/383147852_PMTX05515-G8%20(3).jpg",
+            title :"Park Avenue",
+            description : "Slim-fitting style, cont…a three-button placket.",
+            price :	22.3,
+        },
+        {
+            id : 2,
+            image : "https://www.myraymond.com/media/product/PCYA00705-B8/PCYA00705-B8(1).webp",
+            title :"Park Avenue",
+            description : "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops.",
+            price : 109.95,
+        },
+        {
+            id : 3,
+            image : "https://www.myraymond.com/media/product/XMAV00538-B8/XMAV00538-B8%20(1).webp",
+            title :"Park",
+            description : "Slim-fitting style, cont…a three-button placket.",
+            price :	15.99,
+        },
+        {
+            id : 4,
+            image : "https://www.myraymond.com/media/product/XMTX03162-N4/XMTX03162-N4%20(1).jpg",
+            title :"Park Avenue",
+            description : "Slim-fitting style, cont…a three-button placket.",
+            price :	695,
+        },
+        {
+            id : 5,
+            image : "https://www.myraymond.com/media/product/PMTQ05513-B7/1216615566_PMTQ05513-B7%20(3).jpg",
+            title :"Park Avenue",
+            description : "Slim-fitting style, cont…a three-button placket.",
+            price :	9.99,
+        },
+        {
+            id : 5,
+            image : "https://www.myraymond.com/media/product/XMOC00952-W1/XMOC00952-W1%20(1).webp",
+            title :"Park Avenue",
+            description : "Slim-fitting style, cont…a three-button placket.",
+            price :	9.99,
+        }
+    ]
+
+    function display(){
+        data.map((el)=>{
+            let div = document.createElement("div")
+
+            let pic = document.createElement("img")
+            pic.setAttribute("src",el.image);
+            pic.setAttribute("id","photo");
+
+            let name = document.createElement("h3")
+            name.innerHTML = el.title
+
+            let des = document.createElement("p")
+            des.innerHTML = el.description
+
+            let pr = document.createElement("h2")
+            pr.innerHTML = "Rs " + el.price
+
+            let btn = document.createElement("button")
+            btn.innerHTML = "Add To Cart"
+
+            div.append(pic , name , des , pr , btn)
+            document.querySelector("#main").append(div)
+        })
+    }
+    display(data)
+    
+</script>
