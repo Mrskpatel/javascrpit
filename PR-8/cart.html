@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cart{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+        img{
+            width: 250px;
+            height: 300px;
+        }
+
+        div :hover img{
+            transform: scale(1.1);
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #photo{
+            width: 100%;
+            height: 361px;
+            overflow: hidden;
+            transition: 1.2s;
+        }
+
+        div{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <div id="cart">
+
+    </div>
+   </center>
+</body>
+</html>
+<script>
+    let products = JSON.parse(localStorage.getItem("cart")) || []
+
+    function display(){
+        products.map((el)=>{
+            let div = document.createElement("div")
+            
+            let image = document.createElement("img")
+            image.setAttribute("src", el.image)
+
+            let title = document.createElement("h2")
+            title.innerHTML = el.title
+
+            let price = document.createElement("h3")
+            price.innerHTML = el.price
+
+            div.append(image , title , price)
+            document.getElementById("cart").append(div)
+        })
+    }
+    display()
+</script>
