@@ -106,5 +106,24 @@
         })
     }
     display(data)
+
+    let sortselect = document.getElementById("sort-select")
     
+    sortselect.addEventListener("change",()=>{
+        let selected = sortselect.value
+
+        let selectedvalue = []
+
+        if (selected === "low") {
+            selectedvalue = data.slice().sort((a,b)=>a.price - b.price)
+        } else if(selected === "high") {
+            selectedvalue = data.slice().sort((a,b)=>b.price - a.price)
+        } else if(selected === "az"){
+            selectedvalue = data.splice().sort((a,b)=>a.title.localeCompare(b.title))
+        }  else if(selected === "za"){
+            selectedvalue = data.splice().sort((a,b)=>b.title.localeCompare(a.title))
+        }
+        display(selectedvalue)
+    })
+
 </script>
