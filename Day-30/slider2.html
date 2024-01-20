@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="">
+        <img src="img/h1_hero1.jpg" alt="" id="img">
+        <img src="img/h1_hero2.jpg" alt="" id="img">
+    </div>
+</body>
+</html>
+<script>
+    let sliders = document.querySelectorAll("#img")
+    let sliderIndex = 0
+
+    function ShowSlides(index) {
+        for (let i = 0; i < sliders.length; i++) {
+            sliders[i].style.display = "none"
+        }
+        sliders[index].style.display = "block"
+    }
+
+    function StartSlides() {
+        setInterval(()=>{
+            ShowSlides(sliderIndex)
+            sliderIndex++
+
+            if (sliderIndex >= sliders.length) {
+                sliderIndex = 0
+            }
+        },2000)
+    }
+
+    StartSlides()
+    ShowSlides(sliderIndex)
+</script>
