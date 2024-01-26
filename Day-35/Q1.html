@@ -40,49 +40,52 @@
         {
             id : 1,
             image : "https://www.myraymond.com/media/product/PMTX05515-G8/383147852_PMTX05515-G8%20(3).jpg",
-            title :"Park Avenue",
+            title :"cark Avenue",
             description : "Slim-fitting style, cont…a three-button placket.",
-            price :	22.3,
+            price :	22,
         },
         {
             id : 2,
             image : "https://www.myraymond.com/media/product/PCYA00705-B8/PCYA00705-B8(1).webp",
-            title :"Park Avenue",
+            title :"dark Avenue",
             description : "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops.",
-            price : 109.95,
+            price : 109,
         },
         {
             id : 3,
             image : "https://www.myraymond.com/media/product/XMAV00538-B8/XMAV00538-B8%20(1).webp",
-            title :"Park",
+            title :"wark",
             description : "Slim-fitting style, cont…a three-button placket.",
-            price :	15.99,
+            price :	15,
         },
         {
             id : 4,
             image : "https://www.myraymond.com/media/product/XMTX03162-N4/XMTX03162-N4%20(1).jpg",
-            title :"Park Avenue",
+            title :"nark Avenue",
             description : "Slim-fitting style, cont…a three-button placket.",
             price :	695,
         },
         {
             id : 5,
             image : "https://www.myraymond.com/media/product/PMTQ05513-B7/1216615566_PMTQ05513-B7%20(3).jpg",
-            title :"Park Avenue",
+            title :"oark Avenue",
             description : "Slim-fitting style, cont…a three-button placket.",
-            price :	9.99,
+            price :	10,
         },
         {
             id : 5,
             image : "https://www.myraymond.com/media/product/XMOC00952-W1/XMOC00952-W1%20(1).webp",
-            title :"Park Avenue",
+            title :"jark Avenue",
             description : "Slim-fitting style, cont…a three-button placket.",
             price :	9.99,
         }
     ]
+    
 
-    function display(){
+    function display(){("main").innerHTML=""
+         document.getElementById
         data.map((el)=>{
+
             let div = document.createElement("div")
 
             let pic = document.createElement("img")
@@ -110,12 +113,15 @@
     let sortselect = document.getElementById("sort-select")
     
     sortselect.addEventListener("change",()=>{
+
+        
         let selected = sortselect.value
 
         let selectedvalue = []
 
         if (selected === "low") {
             selectedvalue = data.slice().sort((a,b)=>a.price - b.price)
+
         } else if(selected === "high") {
             selectedvalue = data.slice().sort((a,b)=>b.price - a.price)
         } else if(selected === "az"){
