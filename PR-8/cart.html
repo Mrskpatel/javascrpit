@@ -45,7 +45,7 @@
     let products = JSON.parse(localStorage.getItem("cart")) || []
 
     function display(){
-        products.map((el)=>{
+        products.map((el,index)=>{
             let div = document.createElement("div")
             
             let image = document.createElement("img")
@@ -57,9 +57,22 @@
             let price = document.createElement("h3")
             price.innerHTML = el.price
 
-            div.append(image , title , price)
+            let quantity = document.createElement("p")
+            quantity.innerHTML = "Quantity : " + el.quantity
+
+            let delBtn = document.createElement("button")
+            delBtn.innerHTML = "Delete"
+            delBtn.addEventListener("click",function(){
+            products.splice(index,1)
+            
+            localStorage.setItem("cart",JSON.stringify(products))
+            display()
+            })
+
+            div.append(image,title,price,quantity,delBtn)
             document.getElementById("cart").append(div)
         })
+        
     }
-    display()
+    display(products)
 </script>

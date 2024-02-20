@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        div{
+            flex-basis: 20%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        #main{
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           margin-top: -10px;
+           margin-left: -10px;
+        }
+
+        #Photo{
+            width: 250px;
+            height: 250px;
+            margin-top: 8px;
+        }
+
+        h3{
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        p{
+            margin-top: 10px;
+        }
+
+        h4{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+async function Data1(){
+    try{
+        let MainData = await fetch('https://fakestoreapi.com/products')
+
+        let Data = await MainData.json()
+
+        console.log(Data);
+
+        Display(Data)
+        
+        }catch(Error){
+            console.log(Error);
+        }
+    }
+
+    Data1()    
+
+    function Display(json){
+        json.map((el)=>{
+            let div = document.createElement("div")
+
+            let image = document.createElement("img")
+            image.setAttribute("src",el.image)
+            image.setAttribute("id", "Photo")
+
+            let h3 = document.createElement("h3")
+            h3.innerText = "Price : " + "$ " +  el.price
+
+            let p = document.createElement("p")
+            p.innerText = el.category
+
+            let title1 = document.createElement("h4")
+            title1.innerText = el.title
+
+            div.append(image,title1,p,h3)
+
+            document.querySelector("#main").append(div)
+        })
+    }
+
+</script>
